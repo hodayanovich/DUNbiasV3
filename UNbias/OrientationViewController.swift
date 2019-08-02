@@ -21,7 +21,7 @@ class OrientationViewController: UIViewController {
     
     
     @IBAction func resourceOrientation(_ sender: Any) {
-        showResourceVC(for: "https://www.itspronouncedmetrosexual.com/2013/01/a-comprehensive-list-of-lgbtq-term-definitions/ ")
+        showResourceVC(for: "https://www.itspronouncedmetrosexual.com/2013/01/a-comprehensive-list-of-lgbtq-term-definitions/")
     }
     
     func showSafariVC(for url: String) {

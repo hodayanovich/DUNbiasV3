@@ -468,43 +468,55 @@ If you got mostly Ds: You might be interested in learning more about ability bia
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-vf-FDj">
                                 <rect key="frame" x="0.0" y="20" width="414" height="1931"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EC8-Dx-YHG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1148"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EC8-Dx-YHG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C8s-bw-CJt">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C8s-bw-CJt">
                                                 <rect key="frame" x="35" y="768" width="339" height="191"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="339" id="K4H-eq-qzi"/>
+                                                    <constraint firstAttribute="height" constant="191" id="Yyu-EZ-P9A"/>
+                                                </constraints>
                                                 <string key="text">Q- How do we address the bias issue?                                                    A- The first step is to realize that everyone has biases and figure out what those are. The way to address them is to expose yourself to new people and situations.
 </string>
                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PEA-6I-u07">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PEA-6I-u07">
                                                 <rect key="frame" x="35" y="473" width="344" height="269"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="269" id="Z8D-AH-N3e"/>
+                                                    <constraint firstAttribute="width" constant="344" id="cUw-VC-VQc"/>
+                                                </constraints>
                                                 <string key="text">Q- How do biases develop?                                  A- As we grow up, our brain and subconscious learns from our experiences. When we see a pattern, we assume that everything must fit it and we become biased. When we go to the pediatrician growing up and see an old white man time and time again, the next time we go to the doctor, we assume that a doctor role is filled by an old white man. </string>
                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plh-s8-OSq">
-                                                <rect key="frame" x="127" y="1035" width="161" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.86274509803921573" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
-                                                <state key="normal" title="Additional Resources">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGI-YJ-ZzP">
+                                                <rect key="frame" x="109" y="941" width="197" height="49"/>
+                                                <color key="backgroundColor" red="0.86170785434084507" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="197" id="0aC-v5-1GO"/>
+                                                    <constraint firstAttribute="height" constant="49" id="rSE-c9-yAM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <state key="normal" title="Micro Agressions">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="additionalButtonTapped:" destination="EXq-Je-BZl" eventType="touchUpInside" id="YEA-wa-FUP"/>
+                                                    <action selector="videoButtonTapped:" destination="EXq-Je-BZl" eventType="touchUpInside" id="Flz-35-355"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyb-EI-ZwY">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyb-EI-ZwY">
                                                 <rect key="frame" x="127" y="998" width="161" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.86274509803921573" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="29" id="mro-O0-wst"/>
+                                                    <constraint firstAttribute="width" constant="161" id="rxU-tz-Glj"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                                 <state key="normal" title="Start Journalling">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -514,36 +526,65 @@ If you got mostly Ds: You might be interested in learning more about ability bia
                                                     <segue destination="kGP-J9-23I" kind="show" id="xwO-v9-i52"/>
                                                 </connections>
                                             </button>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpx-KY-YRp">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpx-KY-YRp">
                                                 <rect key="frame" x="35" y="321" width="344" height="127"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="344" id="MkB-VY-2sJ"/>
+                                                    <constraint firstAttribute="height" constant="127" id="X8r-X0-lw8"/>
+                                                </constraints>
                                                 <string key="text">Dictionary definition- “What is a bias- prejudice in favor of or against one thing, person, or group compared with another, usually in a way considered to be unfair.”</string>
                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="learn more general" translatesAutoresizingMaskIntoConstraints="NO" id="eby-0P-cqa">
                                                 <rect key="frame" x="10" y="1" width="394" height="360"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="360" id="86J-Hw-s7l"/>
+                                                    <constraint firstAttribute="width" constant="394" id="Cci-cE-dc4"/>
+                                                </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGI-YJ-ZzP">
-                                                <rect key="frame" x="109" y="941" width="197" height="49"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.86170785434084507" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <state key="normal" title="Micro Agressions">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plh-s8-OSq">
+                                                <rect key="frame" x="127" y="1035" width="161" height="29"/>
+                                                <color key="backgroundColor" red="0.86274509803921573" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="29" id="L8g-JY-KmU"/>
+                                                    <constraint firstAttribute="width" constant="161" id="gZR-mf-TPL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                                                <state key="normal" title="Additional Resources">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="videoButtonTapped:" destination="EXq-Je-BZl" eventType="touchUpInside" id="Flz-35-355"/>
+                                                    <action selector="additionalButtonTapped:" destination="EXq-Je-BZl" eventType="touchUpInside" id="YEA-wa-FUP"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="eby-0P-cqa" secondAttribute="trailing" constant="10" id="Idh-hs-BaB"/>
-                                            <constraint firstItem="eby-0P-cqa" firstAttribute="top" secondItem="EC8-Dx-YHG" secondAttribute="top" constant="1" id="Uyh-wy-IAh"/>
-                                            <constraint firstItem="eby-0P-cqa" firstAttribute="leading" secondItem="EC8-Dx-YHG" secondAttribute="leading" constant="10" id="WGN-YA-LdT"/>
+                                            <constraint firstAttribute="trailing" secondItem="C8s-bw-CJt" secondAttribute="trailing" constant="40" id="2Ph-dB-6gy"/>
+                                            <constraint firstAttribute="trailing" secondItem="eby-0P-cqa" secondAttribute="trailing" constant="10" id="88A-57-8Jt"/>
+                                            <constraint firstItem="plh-s8-OSq" firstAttribute="leading" secondItem="EC8-Dx-YHG" secondAttribute="leading" constant="127" id="Aii-jx-fO8"/>
+                                            <constraint firstAttribute="trailing" secondItem="rpx-KY-YRp" secondAttribute="trailing" constant="35" id="GdK-C8-Cqa"/>
+                                            <constraint firstAttribute="trailing" secondItem="PEA-6I-u07" secondAttribute="trailing" constant="35" id="IxM-xW-INI"/>
+                                            <constraint firstItem="C8s-bw-CJt" firstAttribute="leading" secondItem="EC8-Dx-YHG" secondAttribute="leading" constant="35" id="L09-ZC-w9T"/>
+                                            <constraint firstItem="tGI-YJ-ZzP" firstAttribute="leading" secondItem="EC8-Dx-YHG" secondAttribute="leading" constant="109" id="QBp-OU-IXk"/>
+                                            <constraint firstItem="PEA-6I-u07" firstAttribute="leading" secondItem="EC8-Dx-YHG" secondAttribute="leading" constant="35" id="UbS-mf-xPQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tyb-EI-ZwY" secondAttribute="trailing" constant="126" id="UvF-1L-Xo9"/>
+                                            <constraint firstAttribute="bottom" secondItem="plh-s8-OSq" secondAttribute="bottom" constant="136" id="VAT-n1-Skf"/>
+                                            <constraint firstItem="tGI-YJ-ZzP" firstAttribute="top" secondItem="PEA-6I-u07" secondAttribute="bottom" constant="199" id="VC5-vv-601"/>
+                                            <constraint firstItem="plh-s8-OSq" firstAttribute="top" secondItem="Tyb-EI-ZwY" secondAttribute="bottom" constant="8" id="Vfq-Jg-i3a"/>
+                                            <constraint firstAttribute="trailing" secondItem="plh-s8-OSq" secondAttribute="trailing" constant="126" id="Vsx-9c-ab6"/>
+                                            <constraint firstItem="rpx-KY-YRp" firstAttribute="top" secondItem="EC8-Dx-YHG" secondAttribute="top" constant="321" id="Z81-pC-mg4"/>
+                                            <constraint firstItem="eby-0P-cqa" firstAttribute="leading" secondItem="EC8-Dx-YHG" secondAttribute="leading" constant="10" id="fWq-ry-LdK"/>
+                                            <constraint firstItem="C8s-bw-CJt" firstAttribute="top" secondItem="PEA-6I-u07" secondAttribute="bottom" constant="26" id="fWz-Wt-576"/>
                                             <constraint firstAttribute="height" constant="1200" id="h5Y-rC-t14"/>
+                                            <constraint firstItem="rpx-KY-YRp" firstAttribute="leading" secondItem="EC8-Dx-YHG" secondAttribute="leading" constant="35" id="hOK-AY-ygO"/>
+                                            <constraint firstAttribute="trailing" secondItem="tGI-YJ-ZzP" secondAttribute="trailing" constant="108" id="jnY-RC-MOk"/>
+                                            <constraint firstItem="Tyb-EI-ZwY" firstAttribute="leading" secondItem="EC8-Dx-YHG" secondAttribute="leading" constant="127" id="k03-uf-6OJ"/>
+                                            <constraint firstItem="eby-0P-cqa" firstAttribute="top" secondItem="EC8-Dx-YHG" secondAttribute="top" constant="1" id="kV4-Df-AXi"/>
+                                            <constraint firstItem="PEA-6I-u07" firstAttribute="top" secondItem="rpx-KY-YRp" secondAttribute="bottom" constant="25" id="laf-jU-9fE"/>
+                                            <constraint firstItem="Tyb-EI-ZwY" firstAttribute="top" secondItem="tGI-YJ-ZzP" secondAttribute="bottom" constant="8" id="roD-op-9QO"/>
                                         </constraints>
                                     </view>
                                 </subviews>
