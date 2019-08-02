@@ -10,20 +10,199 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="iDO-4r-v9Y">
             <objects>
-                <viewController id="6zc-zU-gBR" sceneMemberID="viewController">
+                <viewController id="6zc-zU-gBR" customClass="QuizViewController" customModule="UNbias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yBg-Mv-goD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnu-g3-Khn">
+                                <rect key="frame" x="0.0" y="-20" width="414" height="3000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKR-dx-WaP">
+                                        <rect key="frame" x="0.0" y="-79" width="406" height="2200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niL-zj-ojG">
+                                                <rect key="frame" x="177" y="87" width="0.0" height="0.0"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8qs-gt-khT">
+                                                <rect key="frame" x="35" y="211" width="336" height="133"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="133" id="5f6-3H-ONH"/>
+                                                    <constraint firstAttribute="width" constant="336" id="jJX-29-HrP"/>
+                                                </constraints>
+                                                <string key="text">We aim to educate people on common biases and expose them to tools that start conversations. This quiz helps you identify implicit biases you may hold and be unfamiliar with and suggests where you should begin your learning. </string>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pb-Um-ehr">
+                                                <rect key="frame" x="22" y="1872" width="363" height="48"/>
+                                                <color key="backgroundColor" red="0.86321759809999998" green="0.93307492469999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="363" id="Cji-xP-z5P"/>
+                                                    <constraint firstAttribute="height" constant="48" id="a38-W4-2Iy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                <state key="normal" title="Learn More About Gender Biases">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="3Px-Xu-0Oo" kind="show" id="In4-2Z-o3q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZG-pd-S8N">
+                                                <rect key="frame" x="22" y="1939" width="363" height="48"/>
+                                                <color key="backgroundColor" red="0.86321759809999998" green="0.93307492469999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="I97-Gv-Txv"/>
+                                                    <constraint firstAttribute="width" constant="363" id="Iy2-yb-W1J"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                <state key="normal" title="Learn More about Sexual Orientation Biases">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="WhY-S8-7Gv" kind="show" id="iVJ-3W-VwR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaG-0k-zyo">
+                                                <rect key="frame" x="22" y="2008" width="363" height="48"/>
+                                                <color key="backgroundColor" red="0.86321759809999998" green="0.93307492469999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="XWJ-1Q-N81"/>
+                                                    <constraint firstAttribute="width" constant="363" id="nAm-zD-Mx6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                <state key="normal" title="Learn more about Racial Biases">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Kbb-vp-qzE" kind="show" id="RmB-3z-kvy"/>
+                                                </connections>
+                                            </button>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="72o-TG-7gP">
+                                                <rect key="frame" x="35" y="384" width="336" height="1480"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="336" id="e8Z-Wv-T8p"/>
+                                                    <constraint firstAttribute="height" constant="1480" id="hko-3G-hzF"/>
+                                                </constraints>
+                                                <mutableString key="text">1. I have never been discriminated against based on my:
+     A) Gender
+     B) Sexuality
+     C) Race
+     D) Ability
+2. Which of these situations most applies to you?
+     A) I have never been in a classroom where I am the only one of my Gender.
+     B)I have never been in a room where I am the only one of my Sexuality.
+     C) I have never been in a room where I am the only one of my Race.
+     D) I have never been in a room where I am the only one of my Ability.  
+3. Which of these situations most applies to  you?
+     A) I have avoided sitting next to someone because of their Gender.
+     B) I have avoided sitting  next to someone because of their Sexuality.
+     C) I have avoided sitting  next to someone because of their Race.
+     D) I have avoided sitting  next to someone because of their Ability.
+4. Which of these statements holds most true?
+     A) I believe that sexism isn't an issue in 2019.
+     B) I believe that  homophobia isn’t an issue in 2019.
+     C) I believe that racism isn’t an issue in 2019.
+     D) I believe that able-ism isn't an issue in 2019.
+5. When I picture the President of the United States I picture....
+     A) A man 
+     B) A straight person
+     C) A white person 
+     D) An abled bodied person
+
+If you got mostly As: You may be interested in learning more about gender biases. 
+
+If you got mostly Bs: You may be interested in learning more about sexual orientation biases. 
+
+If you got mostly Cs: You might be interested in learning more about racial biases. 
+
+If you got mostly Ds: You might be interested in learning more about ability biases.
+</mutableString>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ned-z1-XFP">
+                                                <rect key="frame" x="66" y="95" width="274" height="85"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="71"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCA-fP-Nj5">
+                                                <rect key="frame" x="22" y="2177" width="363" height="48"/>
+                                                <color key="backgroundColor" red="0.86321759809999998" green="0.93307492469999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="SXb-Cy-qRC"/>
+                                                    <constraint firstAttribute="width" constant="363" id="dGr-uf-Aff"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                <state key="normal" title="Learn More about Ability Biases">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="GZL-G4-nNM" kind="show" id="Qu5-G2-h8B"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="GaG-0k-zyo" firstAttribute="top" secondItem="sZG-pd-S8N" secondAttribute="bottom" constant="21" id="2ri-xh-Vhz"/>
+                                            <constraint firstAttribute="height" constant="2200" id="3x9-2B-wEv"/>
+                                            <constraint firstItem="8qs-gt-khT" firstAttribute="top" secondItem="Ned-z1-XFP" secondAttribute="bottom" constant="31" id="49A-2P-NyG"/>
+                                            <constraint firstItem="7pb-Um-ehr" firstAttribute="top" secondItem="72o-TG-7gP" secondAttribute="bottom" constant="8" id="8f2-Ge-0if"/>
+                                            <constraint firstItem="sZG-pd-S8N" firstAttribute="leading" secondItem="RKR-dx-WaP" secondAttribute="leading" constant="22" id="BKR-Tc-scl"/>
+                                            <constraint firstAttribute="width" constant="406" id="BgH-gT-kUp"/>
+                                            <constraint firstAttribute="trailing" secondItem="72o-TG-7gP" secondAttribute="trailing" constant="35" id="D2U-OE-45j"/>
+                                            <constraint firstAttribute="trailing" secondItem="FCA-fP-Nj5" secondAttribute="trailing" constant="21" id="Hxe-L4-8IQ"/>
+                                            <constraint firstItem="Ned-z1-XFP" firstAttribute="top" secondItem="RKR-dx-WaP" secondAttribute="top" constant="95" id="Kw5-wk-DR7"/>
+                                            <constraint firstItem="sZG-pd-S8N" firstAttribute="top" secondItem="7pb-Um-ehr" secondAttribute="bottom" constant="19" id="M4b-2V-iGh"/>
+                                            <constraint firstAttribute="trailing" secondItem="GaG-0k-zyo" secondAttribute="trailing" constant="21" id="MSS-yH-qsJ"/>
+                                            <constraint firstItem="7pb-Um-ehr" firstAttribute="leading" secondItem="RKR-dx-WaP" secondAttribute="leading" constant="22" id="Pi4-gC-mSV"/>
+                                            <constraint firstAttribute="trailing" secondItem="sZG-pd-S8N" secondAttribute="trailing" constant="21" id="ROq-Kh-RIf"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ned-z1-XFP" secondAttribute="trailing" constant="66" id="TX0-6K-SNz"/>
+                                            <constraint firstAttribute="bottom" secondItem="FCA-fP-Nj5" secondAttribute="bottom" constant="-25" id="UM2-6Q-zD4"/>
+                                            <constraint firstItem="72o-TG-7gP" firstAttribute="top" secondItem="8qs-gt-khT" secondAttribute="bottom" constant="40" id="W8X-wR-8YM"/>
+                                            <constraint firstItem="Ned-z1-XFP" firstAttribute="leading" secondItem="RKR-dx-WaP" secondAttribute="leading" constant="66" id="Wk0-7P-gOG"/>
+                                            <constraint firstAttribute="trailing" secondItem="8qs-gt-khT" secondAttribute="trailing" constant="35" id="YgG-H9-tDG"/>
+                                            <constraint firstAttribute="trailing" secondItem="7pb-Um-ehr" secondAttribute="trailing" constant="21" id="da8-ta-RIX"/>
+                                            <constraint firstItem="72o-TG-7gP" firstAttribute="leading" secondItem="RKR-dx-WaP" secondAttribute="leading" constant="35" id="jzM-im-eD2"/>
+                                            <constraint firstItem="GaG-0k-zyo" firstAttribute="leading" secondItem="RKR-dx-WaP" secondAttribute="leading" constant="22" id="mM3-2P-GVn"/>
+                                            <constraint firstItem="8qs-gt-khT" firstAttribute="leading" secondItem="RKR-dx-WaP" secondAttribute="leading" constant="35" id="nJF-ig-PBB"/>
+                                            <constraint firstItem="FCA-fP-Nj5" firstAttribute="leading" secondItem="RKR-dx-WaP" secondAttribute="leading" constant="22" id="v7d-5l-Dvq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RKR-dx-WaP" secondAttribute="bottom" id="7xg-4l-UkX"/>
+                                    <constraint firstItem="RKR-dx-WaP" firstAttribute="top" secondItem="cnu-g3-Khn" secondAttribute="top" id="Rcr-gf-63I"/>
+                                    <constraint firstAttribute="trailing" secondItem="RKR-dx-WaP" secondAttribute="trailing" id="UdZ-AS-Qh2"/>
+                                    <constraint firstItem="RKR-dx-WaP" firstAttribute="leading" secondItem="cnu-g3-Khn" secondAttribute="leading" id="gnP-14-lJa"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cnu-g3-Khn" firstAttribute="trailing" secondItem="KD5-1b-Odb" secondAttribute="trailing" id="eFE-Eg-9Tm"/>
+                            <constraint firstItem="cnu-g3-Khn" firstAttribute="leading" secondItem="KD5-1b-Odb" secondAttribute="leading" id="tLN-EC-WyE"/>
+                            <constraint firstItem="cnu-g3-Khn" firstAttribute="bottom" secondItem="KD5-1b-Odb" secondAttribute="bottom" id="uIt-J0-Rnf"/>
+                            <constraint firstItem="cnu-g3-Khn" firstAttribute="top" secondItem="yBg-Mv-goD" secondAttribute="top" id="wjv-Ne-Bwy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KD5-1b-Odb"/>
                     </view>
+                    <size key="freeformSize" width="414" height="3000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkd-RX-bVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="145" y="880"/>
+            <point key="canvasLocation" x="144.92753623188406" y="879.61956521739137"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -35,7 +214,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnA-uN-UTJ">
                                 <rect key="frame" x="92" y="546" width="231" height="44"/>
-                                <color key="backgroundColor" red="0.86135023991991166" green="0.96862745098039216" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.86274509803921573" green="0.96862745098039216" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
                                 <state key="normal" title="Set Goals">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -118,9 +297,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3m-m7-e5x">
-                                <rect key="frame" x="78" y="308" width="259" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3m-m7-e5x">
+                                <rect key="frame" x="78" y="483" width="259" height="48"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <state key="normal" title="Video">
@@ -130,9 +308,8 @@
                                     <action selector="videoAbilities:" destination="GZL-G4-nNM" eventType="touchUpInside" id="20r-vd-Mvb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gym-u7-smb">
-                                <rect key="frame" x="78" y="495" width="259" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gym-u7-smb">
+                                <rect key="frame" x="78" y="563" width="259" height="48"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <state key="normal" title="Resource">
@@ -142,9 +319,8 @@
                                     <action selector="resourceAbilies:" destination="GZL-G4-nNM" eventType="touchUpInside" id="UDw-LS-NwE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NH-Ya-KX8">
-                                <rect key="frame" x="78" y="132" width="259" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NH-Ya-KX8">
+                                <rect key="frame" x="78" y="403" width="259" height="48"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <state key="normal" title="Article">
@@ -154,8 +330,27 @@
                                     <action selector="articleAbilities:" destination="GZL-G4-nNM" eventType="touchUpInside" id="DyO-78-b42"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="learn more ability" translatesAutoresizingMaskIntoConstraints="NO" id="frt-xG-bmQ">
+                                <rect key="frame" x="10" y="21" width="394" height="360"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9NH-Ya-KX8" firstAttribute="top" secondItem="frt-xG-bmQ" secondAttribute="bottom" constant="22" id="3RW-0z-QSW"/>
+                            <constraint firstItem="gym-u7-smb" firstAttribute="top" secondItem="u3m-m7-e5x" secondAttribute="bottom" constant="32" id="3bv-6Y-LQ3"/>
+                            <constraint firstItem="frt-xG-bmQ" firstAttribute="leading" secondItem="XWD-jo-g6a" secondAttribute="leading" constant="10" id="GdM-BQ-qLa"/>
+                            <constraint firstItem="XWD-jo-g6a" firstAttribute="trailing" secondItem="u3m-m7-e5x" secondAttribute="trailing" constant="77" id="L5G-SJ-LgB"/>
+                            <constraint firstItem="XWD-jo-g6a" firstAttribute="trailing" secondItem="9NH-Ya-KX8" secondAttribute="trailing" constant="77" id="O6O-B5-3BK"/>
+                            <constraint firstItem="XWD-jo-g6a" firstAttribute="trailing" secondItem="gym-u7-smb" secondAttribute="trailing" constant="77" id="PUU-2o-WjT"/>
+                            <constraint firstItem="gym-u7-smb" firstAttribute="top" secondItem="u3m-m7-e5x" secondAttribute="bottom" constant="32" id="RIN-4n-hsv"/>
+                            <constraint firstItem="u3m-m7-e5x" firstAttribute="leading" secondItem="XWD-jo-g6a" secondAttribute="leading" constant="78" id="Z19-37-MHM"/>
+                            <constraint firstItem="9NH-Ya-KX8" firstAttribute="leading" secondItem="XWD-jo-g6a" secondAttribute="leading" constant="78" id="h0c-f4-n04"/>
+                            <constraint firstItem="u3m-m7-e5x" firstAttribute="top" secondItem="9NH-Ya-KX8" secondAttribute="bottom" constant="32" id="kSN-rH-K8c"/>
+                            <constraint firstItem="XWD-jo-g6a" firstAttribute="trailing" secondItem="frt-xG-bmQ" secondAttribute="trailing" constant="10" id="mtc-aK-4Qp"/>
+                            <constraint firstItem="9NH-Ya-KX8" firstAttribute="top" secondItem="frt-xG-bmQ" secondAttribute="bottom" constant="22" id="sSR-M5-Sfp"/>
+                            <constraint firstItem="gym-u7-smb" firstAttribute="leading" secondItem="XWD-jo-g6a" secondAttribute="leading" constant="78" id="wxr-P5-9i5"/>
+                            <constraint firstItem="frt-xG-bmQ" firstAttribute="top" secondItem="XWD-jo-g6a" secondAttribute="top" constant="1" id="zM7-3m-QNZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XWD-jo-g6a"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Abilities" id="bYN-tK-pmx"/>
@@ -179,33 +374,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gQ-ZS-264">
-                                <rect key="frame" x="78" y="282" width="259" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                <state key="normal" title="Article">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="articleGender:" destination="3Px-Xu-0Oo" eventType="touchUpInside" id="KzG-a6-0Le"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sl7-VQ-1c9">
-                                <rect key="frame" x="78" y="354" width="259" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                <state key="normal" title="Video">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="videoGender:" destination="3Px-Xu-0Oo" eventType="touchUpInside" id="lqd-QT-F1H"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jht-Ly-H5I">
-                                <rect key="frame" x="78" y="439" width="259" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jht-Ly-H5I">
+                                <rect key="frame" x="78" y="563" width="259" height="48"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <state key="normal" title="Resource">
@@ -215,8 +385,48 @@
                                     <action selector="resourceGender:" destination="3Px-Xu-0Oo" eventType="touchUpInside" id="YWm-CJ-t7f"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gQ-ZS-264">
+                                <rect key="frame" x="78" y="403" width="259" height="48"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <state key="normal" title="Article">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="articleGender:" destination="3Px-Xu-0Oo" eventType="touchUpInside" id="KzG-a6-0Le"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sl7-VQ-1c9">
+                                <rect key="frame" x="78" y="483" width="259" height="48"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <state key="normal" title="Video">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="videoGender:" destination="3Px-Xu-0Oo" eventType="touchUpInside" id="lqd-QT-F1H"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="learn more gender" translatesAutoresizingMaskIntoConstraints="NO" id="ppx-0z-qYr">
+                                <rect key="frame" x="10" y="21" width="394" height="360"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sl7-VQ-1c9" firstAttribute="top" secondItem="2gQ-ZS-264" secondAttribute="bottom" constant="32" id="ESB-Kz-Olp"/>
+                            <constraint firstItem="Sl7-VQ-1c9" firstAttribute="top" secondItem="2gQ-ZS-264" secondAttribute="bottom" constant="32" id="FVt-c2-y5F"/>
+                            <constraint firstItem="Sl7-VQ-1c9" firstAttribute="leading" secondItem="XS8-nF-opw" secondAttribute="leading" constant="78" id="IfM-wb-BqC"/>
+                            <constraint firstItem="XS8-nF-opw" firstAttribute="trailing" secondItem="2gQ-ZS-264" secondAttribute="trailing" constant="77" id="RkQ-cy-Rxb"/>
+                            <constraint firstItem="ppx-0z-qYr" firstAttribute="leading" secondItem="XS8-nF-opw" secondAttribute="leading" constant="10" id="Rv9-zY-NTt"/>
+                            <constraint firstItem="2gQ-ZS-264" firstAttribute="leading" secondItem="XS8-nF-opw" secondAttribute="leading" constant="78" id="TOU-VG-Uc1"/>
+                            <constraint firstItem="XS8-nF-opw" firstAttribute="trailing" secondItem="jht-Ly-H5I" secondAttribute="trailing" constant="77" id="Xuj-Jc-qSl"/>
+                            <constraint firstItem="jht-Ly-H5I" firstAttribute="leading" secondItem="XS8-nF-opw" secondAttribute="leading" constant="78" id="ZKd-Wi-BCO"/>
+                            <constraint firstItem="XS8-nF-opw" firstAttribute="trailing" secondItem="ppx-0z-qYr" secondAttribute="trailing" constant="10" id="cPY-Hh-pXy"/>
+                            <constraint firstItem="jht-Ly-H5I" firstAttribute="top" secondItem="Sl7-VQ-1c9" secondAttribute="bottom" constant="32" id="oY2-20-XoN"/>
+                            <constraint firstItem="XS8-nF-opw" firstAttribute="trailing" secondItem="Sl7-VQ-1c9" secondAttribute="trailing" constant="77" id="pIq-gS-dYQ"/>
+                            <constraint firstItem="ppx-0z-qYr" firstAttribute="top" secondItem="XS8-nF-opw" secondAttribute="top" constant="1" id="rO3-dK-Glb"/>
+                            <constraint firstItem="2gQ-ZS-264" firstAttribute="top" secondItem="ppx-0z-qYr" secondAttribute="bottom" constant="22" id="xpP-y7-ert"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XS8-nF-opw"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Gender" id="yAU-BD-b5U"/>
@@ -251,43 +461,35 @@
             <objects>
                 <viewController id="EXq-Je-BZl" customClass="GeneralViewController" customModule="UNbias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FNM-C8-Gga">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-vf-FDj">
-                                <rect key="frame" x="0.0" y="20" width="414" height="931"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="1931"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EC8-Dx-YHG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EC8-Dx-YHG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1148"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C8s-bw-CJt">
-                                                <rect key="frame" x="55" y="491" width="234" height="161.66666666666666"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C8s-bw-CJt">
+                                                <rect key="frame" x="35" y="768" width="339" height="191"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">Q- How do we address the bias issue?                                                    A- The first step is to realize that everyone has biases and figure out what those are. The way to address them is to expose yourself to new people and situations.
 </string>
-                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PEA-6I-u07">
-                                                <rect key="frame" x="52" y="225" width="240" height="258"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PEA-6I-u07">
+                                                <rect key="frame" x="35" y="473" width="344" height="269"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <string key="text">Q- How do biases develop?                A- As we grow up, our brain and subconscious learns from our experiences. When we see a pattern, we assume that everything must fit it and we become biased. When we go to the pediatrician growing up and see an old white man time and time again, the next time we go to the doctor, we assume that a doctor role is filled by an old white man. </string>
-                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rpx-KY-YRp">
-                                                <rect key="frame" x="52" y="89" width="240" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <string key="text">Dictionary definition- “What is a bias- prejudice in favor of or against one thing, person, or group compared with another, usually in a way considered to be unfair.”</string>
-                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                                <string key="text">Q- How do biases develop?                                  A- As we grow up, our brain and subconscious learns from our experiences. When we see a pattern, we assume that everything must fit it and we become biased. When we go to the pediatrician growing up and see an old white man time and time again, the next time we go to the doctor, we assume that a doctor role is filled by an old white man. </string>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plh-s8-OSq">
-                                                <rect key="frame" x="214" y="817" width="161" height="32"/>
+                                                <rect key="frame" x="127" y="1035" width="161" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.86274509803921573" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
@@ -298,20 +500,8 @@
                                                     <action selector="additionalButtonTapped:" destination="EXq-Je-BZl" eventType="touchUpInside" id="YEA-wa-FUP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGI-YJ-ZzP">
-                                                <rect key="frame" x="186" y="725" width="189" height="42"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.86170785434084507" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <state key="normal" title="Micro Agressions">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="videoButtonTapped:" destination="EXq-Je-BZl" eventType="touchUpInside" id="Flz-35-355"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyb-EI-ZwY">
-                                                <rect key="frame" x="214" y="775" width="161" height="34"/>
+                                                <rect key="frame" x="127" y="998" width="161" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.86274509803921573" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
@@ -323,17 +513,36 @@
                                                     <segue destination="kGP-J9-23I" kind="show" id="xwO-v9-i52"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="General Information about Biases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soc-1s-MWi">
-                                                <rect key="frame" x="14" y="39" width="386" height="28"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpx-KY-YRp">
+                                                <rect key="frame" x="35" y="321" width="344" height="127"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Dictionary definition- “What is a bias- prejudice in favor of or against one thing, person, or group compared with another, usually in a way considered to be unfair.”</string>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="learn more general" translatesAutoresizingMaskIntoConstraints="NO" id="eby-0P-cqa">
+                                                <rect key="frame" x="10" y="1" width="394" height="360"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGI-YJ-ZzP">
+                                                <rect key="frame" x="109" y="941" width="197" height="49"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.86170785434084507" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <state key="normal" title="Micro Agressions">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="videoButtonTapped:" destination="EXq-Je-BZl" eventType="touchUpInside" id="Flz-35-355"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1000" id="h5Y-rC-t14"/>
+                                            <constraint firstAttribute="trailing" secondItem="eby-0P-cqa" secondAttribute="trailing" constant="10" id="Idh-hs-BaB"/>
+                                            <constraint firstItem="eby-0P-cqa" firstAttribute="top" secondItem="EC8-Dx-YHG" secondAttribute="top" constant="1" id="Uyh-wy-IAh"/>
+                                            <constraint firstItem="eby-0P-cqa" firstAttribute="leading" secondItem="EC8-Dx-YHG" secondAttribute="leading" constant="10" id="WGN-YA-LdT"/>
+                                            <constraint firstAttribute="height" constant="1200" id="h5Y-rC-t14"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -364,7 +573,7 @@
                         <viewLayoutGuide key="safeArea" id="K5N-40-CxJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="General" id="27G-uc-mbA"/>
-                    <size key="freeformSize" width="414" height="1000"/>
+                    <size key="freeformSize" width="414" height="2000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4W9-AN-LqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -378,16 +587,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Racial Biases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bX-ee-P3T">
-                                <rect key="frame" x="138" y="74" width="138" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL4-mP-Bg7">
-                                <rect key="frame" x="78" y="440" width="259" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL4-mP-Bg7">
+                                <rect key="frame" x="78" y="572" width="259" height="48"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <state key="normal" title="          Resources          ">
@@ -397,9 +598,11 @@
                                     <action selector="resourceRace:" destination="Kbb-vp-qzE" eventType="touchUpInside" id="AcW-8c-3m5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcO-FT-jJT">
-                                <rect key="frame" x="78" y="191" width="259" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="learn more race" translatesAutoresizingMaskIntoConstraints="NO" id="yNY-i6-r86">
+                                <rect key="frame" x="10" y="21" width="394" height="360"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcO-FT-jJT">
+                                <rect key="frame" x="78" y="413" width="259" height="47"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="29"/>
                                 <state key="normal" title="            Articles             ">
@@ -409,9 +612,8 @@
                                     <action selector="articleButton:" destination="Kbb-vp-qzE" eventType="touchUpInside" id="ohM-tp-vWC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aS-tK-3cb">
-                                <rect key="frame" x="78" y="323" width="259" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aS-tK-3cb">
+                                <rect key="frame" x="78" y="492" width="259" height="48"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <state key="normal" title="            Videos            ">
@@ -423,6 +625,20 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7aS-tK-3cb" firstAttribute="top" secondItem="tcO-FT-jJT" secondAttribute="bottom" constant="32" id="1Ga-FY-8q0"/>
+                            <constraint firstItem="6LK-Vb-VoM" firstAttribute="trailing" secondItem="yNY-i6-r86" secondAttribute="trailing" constant="10" id="2GS-a4-Ug4"/>
+                            <constraint firstItem="SL4-mP-Bg7" firstAttribute="top" secondItem="7aS-tK-3cb" secondAttribute="bottom" constant="32" id="5qR-oh-kwu"/>
+                            <constraint firstItem="6LK-Vb-VoM" firstAttribute="trailing" secondItem="tcO-FT-jJT" secondAttribute="trailing" constant="77" id="7Uv-VP-Mlr"/>
+                            <constraint firstItem="tcO-FT-jJT" firstAttribute="leading" secondItem="6LK-Vb-VoM" secondAttribute="leading" constant="78" id="Cgi-UN-yGi"/>
+                            <constraint firstItem="6LK-Vb-VoM" firstAttribute="trailing" secondItem="7aS-tK-3cb" secondAttribute="trailing" constant="77" id="EEo-RX-YZy"/>
+                            <constraint firstItem="6LK-Vb-VoM" firstAttribute="trailing" secondItem="SL4-mP-Bg7" secondAttribute="trailing" constant="77" id="IDO-UP-XEs"/>
+                            <constraint firstItem="SL4-mP-Bg7" firstAttribute="leading" secondItem="6LK-Vb-VoM" secondAttribute="leading" constant="78" id="NaT-vA-U7t"/>
+                            <constraint firstItem="yNY-i6-r86" firstAttribute="leading" secondItem="6LK-Vb-VoM" secondAttribute="leading" constant="10" id="Sv2-MM-I6g"/>
+                            <constraint firstItem="tcO-FT-jJT" firstAttribute="top" secondItem="yNY-i6-r86" secondAttribute="bottom" constant="32" id="eEF-69-fCg"/>
+                            <constraint firstItem="7aS-tK-3cb" firstAttribute="leading" secondItem="6LK-Vb-VoM" secondAttribute="leading" constant="78" id="p9q-aS-9nT"/>
+                            <constraint firstItem="yNY-i6-r86" firstAttribute="top" secondItem="6LK-Vb-VoM" secondAttribute="top" constant="1" id="xUF-Yh-2Jg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6LK-Vb-VoM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Race" id="auz-Zv-mhF"/>
@@ -439,9 +655,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="av7-CI-WCX">
-                                <rect key="frame" x="78" y="364" width="259" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="av7-CI-WCX">
+                                <rect key="frame" x="78" y="483" width="259" height="48"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <state key="normal" title="Video">
@@ -451,9 +666,8 @@
                                     <action selector="videoOrientation:" destination="WhY-S8-7Gv" eventType="touchUpInside" id="Ko5-sQ-C2A"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrb-Ta-4yQ">
-                                <rect key="frame" x="78" y="466" width="259" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrb-Ta-4yQ">
+                                <rect key="frame" x="78" y="563" width="259" height="48"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <state key="normal" title="Resource">
@@ -463,13 +677,11 @@
                                     <action selector="resourceOrientation:" destination="WhY-S8-7Gv" eventType="touchUpInside" id="OpM-i0-V03"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="learn more SO" translatesAutoresizingMaskIntoConstraints="NO" id="Qy5-l6-FvJ">
-                                <rect key="frame" x="87" y="102" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="learn more SO" translatesAutoresizingMaskIntoConstraints="NO" id="Qy5-l6-FvJ">
+                                <rect key="frame" x="10" y="21" width="394" height="360"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJm-HZ-fZ6">
-                                <rect key="frame" x="78" y="252" width="259" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJm-HZ-fZ6">
+                                <rect key="frame" x="78" y="403" width="259" height="48"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.96862745100000003" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <state key="normal" title="Article">
@@ -481,6 +693,21 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="av7-CI-WCX" firstAttribute="top" secondItem="CJm-HZ-fZ6" secondAttribute="bottom" constant="32" id="0TI-9w-KCa"/>
+                            <constraint firstItem="Qy5-l6-FvJ" firstAttribute="leading" secondItem="ydY-GI-RDO" secondAttribute="leading" constant="10" id="5w0-u7-VDs"/>
+                            <constraint firstItem="ydY-GI-RDO" firstAttribute="trailing" secondItem="yrb-Ta-4yQ" secondAttribute="trailing" constant="77" id="7S1-Zr-hwe"/>
+                            <constraint firstItem="ydY-GI-RDO" firstAttribute="trailing" secondItem="CJm-HZ-fZ6" secondAttribute="trailing" constant="77" id="99E-Jb-tra"/>
+                            <constraint firstItem="Qy5-l6-FvJ" firstAttribute="top" secondItem="ydY-GI-RDO" secondAttribute="top" constant="1" id="9ML-8H-9iY"/>
+                            <constraint firstItem="yrb-Ta-4yQ" firstAttribute="leading" secondItem="ydY-GI-RDO" secondAttribute="leading" constant="78" id="APR-Ed-b9W"/>
+                            <constraint firstItem="yrb-Ta-4yQ" firstAttribute="top" secondItem="av7-CI-WCX" secondAttribute="bottom" constant="32" id="Cfd-jN-0fP"/>
+                            <constraint firstItem="ydY-GI-RDO" firstAttribute="trailing" secondItem="av7-CI-WCX" secondAttribute="trailing" constant="77" id="Fdp-AA-VQy"/>
+                            <constraint firstItem="av7-CI-WCX" firstAttribute="leading" secondItem="ydY-GI-RDO" secondAttribute="leading" constant="78" id="NtZ-Ba-rRB"/>
+                            <constraint firstItem="CJm-HZ-fZ6" firstAttribute="leading" secondItem="ydY-GI-RDO" secondAttribute="leading" constant="78" id="PUe-r7-iKh"/>
+                            <constraint firstItem="CJm-HZ-fZ6" firstAttribute="top" secondItem="Qy5-l6-FvJ" secondAttribute="bottom" constant="22" id="T90-QU-QNX"/>
+                            <constraint firstItem="ydY-GI-RDO" firstAttribute="trailing" secondItem="Qy5-l6-FvJ" secondAttribute="trailing" constant="10" id="X4L-0I-Scp"/>
+                            <constraint firstItem="yrb-Ta-4yQ" firstAttribute="top" secondItem="av7-CI-WCX" secondAttribute="bottom" constant="32" id="nkz-BR-ucp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ydY-GI-RDO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sexual Orientation" id="aNt-cX-hVv"/>
@@ -832,9 +1059,17 @@
     <resources>
         <image name="home page 400" width="400" height="400"/>
         <image name="learn more SO" width="1000" height="360"/>
+        <image name="learn more ability" width="1000" height="360"/>
+        <image name="learn more gender" width="1000" height="360"/>
+        <image name="learn more general" width="1000" height="360"/>
+        <image name="learn more race" width="1000" height="360"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xwO-v9-i52"/>
+        <segue reference="iVJ-3W-VwR"/>
+        <segue reference="RmB-3z-kvy"/>
+        <segue reference="In4-2Z-o3q"/>
+        <segue reference="Qu5-G2-h8B"/>
         <segue reference="ngF-rO-Hvp"/>
     </inferredMetricsTieBreakers>
 </document>

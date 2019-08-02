@@ -15,6 +15,7 @@
 		182B7A1022F47A3E005DB9D9 /* CompleteToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B7A0D22F47A3E005DB9D9 /* CompleteToDoViewController.swift */; };
 		182B7A1122F47A3E005DB9D9 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B7A0E22F47A3E005DB9D9 /* ToDoTableViewController.swift */; };
 		182B7A1222F47A3E005DB9D9 /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B7A0F22F47A3E005DB9D9 /* AddToDoViewController.swift */; };
+		182B7A1522F49858005DB9D9 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B7A1422F49858005DB9D9 /* QuizViewController.swift */; };
 		1864301A22F21AB8001796C4 /* SetGoalsViewContrtoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1864301922F21AB8001796C4 /* SetGoalsViewContrtoller.swift */; };
 		1864301C22F21ACA001796C4 /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1864301B22F21ACA001796C4 /* RaceViewController.swift */; };
 		1864301E22F21AD9001796C4 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1864301D22F21AD9001796C4 /* GenderViewController.swift */; };
@@ -57,6 +58,7 @@
 		182B7A0D22F47A3E005DB9D9 /* CompleteToDoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteToDoViewController.swift; sourceTree = "<group>"; };
 		182B7A0E22F47A3E005DB9D9 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		182B7A0F22F47A3E005DB9D9 /* AddToDoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
+		182B7A1422F49858005DB9D9 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		1864301922F21AB8001796C4 /* SetGoalsViewContrtoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalsViewContrtoller.swift; sourceTree = "<group>"; };
 		1864301B22F21ACA001796C4 /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
 		1864301D22F21AD9001796C4 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				1864301D22F21AD9001796C4 /* GenderViewController.swift */,
 				1864301F22F21AE8001796C4 /* AbilitiesViewController.swift */,
 				1864302122F21AF6001796C4 /* OrientationViewController.swift */,
+				182B7A1422F49858005DB9D9 /* QuizViewController.swift */,
 				182B7A1322F47A4A005DB9D9 /* Set Goals */,
 				1818069C22F4750C00541E98 /* Journaling */,
 				18E271A822F1ED9500A65C40 /* Assets.xcassets */,
@@ -332,6 +335,7 @@
 				182B7A1222F47A3E005DB9D9 /* AddToDoViewController.swift in Sources */,
 				18E271A722F1ED9300A65C40 /* UNbias.xcdatamodeld in Sources */,
 				1818069722F4750200541E98 /* NoteDetailViewController.swift in Sources */,
+				182B7A1522F49858005DB9D9 /* QuizViewController.swift in Sources */,
 				1864303622F3572A001796C4 /* GeneralViewController.swift in Sources */,
 				18E2719F22F1ED9300A65C40 /* AppDelegate.swift in Sources */,
 			);
